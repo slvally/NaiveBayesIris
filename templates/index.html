@@ -1,0 +1,81 @@
+<html>
+    <head>        
+        <title>Aplikasi Klasifikasi Data Iris</title>
+    </head>
+    <body>    
+            <h1>
+                Klasifikasi data Iris:
+            </h1>
+
+            <form
+                action="{{ url_for('predict') }}"
+                method="post"
+            >
+                <label for="sepal_length" >sepal_length</label>
+                <input
+                    type="text"
+                    name="sepal_length"
+                    placeholder="sepal_length"
+                    required="required"                    
+                />
+
+                <label for="sepal_width" >sepal_width
+
+                </label >
+                <input
+                    type="text"
+                    name="sepal_width"
+                    placeholder="sepal_width"
+                    required="required"
+                />
+
+                <label for="petal_length" >petal_length
+
+                </label >
+                <input
+                    type="text"
+                    name="petal_length"
+                    placeholder="petal_length"
+                    required="required"
+                />
+
+                <label for="petal_width" 
+                    >petal_width
+
+                </label >
+                <input
+                    type="text"
+                    name="petal_width"
+                    placeholder="petal_width"
+                    required="required"
+                />
+
+              
+                 <button
+                    type="submit"                    
+                >
+                    KLASIFIKASI IRIS
+                    
+                        
+                    
+                </button>
+            </form>
+        </main>
+        <section>
+            <div >
+                    <p>sepal_length: {{ sepal_length }} </p>
+                    <p>sepal_width: {{ sepal_width }}</p>
+                    <p>petal_length: {{ petal_length }}</p>
+                    <p>petal_width: {{ petal_width }}</p>
+		<div>
+		<h1>
+                    Hasil klasifikasi data iris adalah
+                </h1>
+                <h2> {{ hasil }}</h2>
+                
+            </div>
+                
+            </div>           
+        </section>
+    </body>
+</html>
